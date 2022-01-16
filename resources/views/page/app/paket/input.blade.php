@@ -163,7 +163,7 @@ $role = Auth::guard('office')->user()->role;
                         <div class="row mt-5">
                             <div class="col-lg-4">
                                 <label class="required fs-6 fw-bold mb-2">Mata Uang</label>
-                                <input type="text" value="{{$data->matauang_alokasi->kode}}" class="form-control" readonly/>
+                                <input type="text" value="{{ $data->mata_uang_alokasi ? $data->matauang_alokasi->kode : ''}}" class="form-control" readonly/>
                             </div>
                             <div class="col-lg-4">
                                 <label class="required fs-6 fw-bold mb-2">Valas</label>

@@ -69,8 +69,10 @@
             </td>
             <td>
                 <span class="fw-bold d-block fs-7">
+                    @if($item->tanggal_mkontrak)
                     Mulai :{{$item->tanggal_mkontrak->format('j M Y')}} <br>
                     Selesai :{{$item->tanggal_skontrak->format('j M Y')}} <br>
+                    @endif
                 </span>
             </td>
             <td>

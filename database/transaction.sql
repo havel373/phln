@@ -12,7 +12,7 @@
  Target Server Version : 120007
  File Encoding         : 65001
 
- Date: 06/01/2022 12:45:16
+ Date: 12/01/2022 23:49:41
 */
 
 
@@ -487,9 +487,11 @@ MAXVALUE 9223372036854775807
 START 1
 ),
   "paket_id" int8,
-  "alokasi" int8,
+  "alokasi_valas" float8,
   "tanggal_revisi" date,
-  "keterangan" text COLLATE "pg_catalog"."default"
+  "keterangan" text COLLATE "pg_catalog"."default",
+  "alokasi_rupiah" float8,
+  "mata_uang_alokasi" int8
 )
 ;
 
@@ -537,10 +539,10 @@ START 1
 ),
   "paket_id" int8,
   "tahun" varchar(4) COLLATE "pg_catalog"."default",
-  "dipa" int8,
+  "dipa" float8,
   "keterangan" varchar(255) COLLATE "pg_catalog"."default",
   "tanggal_revisi" date,
-  "prognosis" int8
+  "prognosis" float8
 )
 ;
 
@@ -691,35 +693,35 @@ SELECT setval('"transaction"."kegiatan_penyerapan_id_seq"', 6, true);
 -- ----------------------------
 ALTER SEQUENCE "transaction"."paket_alokasi_id_seq"
 OWNED BY "transaction"."paket_alokasi"."id";
-SELECT setval('"transaction"."paket_alokasi_id_seq"', 5, true);
+SELECT setval('"transaction"."paket_alokasi_id_seq"', 7, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "transaction"."paket_awp_id_seq"
 OWNED BY "transaction"."paket_awp"."id";
-SELECT setval('"transaction"."paket_awp_id_seq"', 27, true);
+SELECT setval('"transaction"."paket_awp_id_seq"', 30, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "transaction"."paket_dipa_id_seq"
 OWNED BY "transaction"."paket_dipa"."id";
-SELECT setval('"transaction"."paket_dipa_id_seq"', 7, true);
+SELECT setval('"transaction"."paket_dipa_id_seq"', 10, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "transaction"."paket_foto_id_seq"
 OWNED BY "transaction"."paket_foto"."id";
-SELECT setval('"transaction"."paket_foto_id_seq"', 7, true);
+SELECT setval('"transaction"."paket_foto_id_seq"', 9, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "transaction"."paket_id_seq"
 OWNED BY "transaction"."paket"."id";
-SELECT setval('"transaction"."paket_id_seq"', 4, true);
+SELECT setval('"transaction"."paket_id_seq"', 7, true);
 
 -- ----------------------------
 -- Alter sequences owned by

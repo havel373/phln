@@ -32,7 +32,7 @@
 				</div>
 				<!--end::Wrapper-->
 				<!--begin::Sidebar-->
-				@include('theme.app.sidebar')
+				{{-- @include('theme.app.sidebar') --}}
 				<!--end::Sidebar-->
 			</div>
 			<!--end::Page-->
