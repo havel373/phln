@@ -9,7 +9,7 @@
                         </li>
                         {{-- @if($data->id) --}}
                         <li class="nav-item">
-                            <a class="nav-link {{request()->is('office/kegiatan/*/paket') ? '   ' : ''}}" href="{{route('phln.kegiatan.paket',$kegiatan->id)}}">2. Pemaketan & Statusnya</a>
+                            <a class="nav-link {{request()->is('office/kegiatan/*/paket') ? 'active' : ''}}" href="{{route('phln.kegiatan.paket',$kegiatan->id)}}">2. Pemaketan & Statusnya</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{request()->is('office/kegiatan/*/paket-timeline') ? 'active' : ''}}" href="{{route('phln.paket_timeline',$kegiatan->id)}}">3. Timeline</a>
