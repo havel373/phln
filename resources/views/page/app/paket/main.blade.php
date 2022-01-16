@@ -5,20 +5,20 @@
                 <div class="card-toolbar">
                     <ul class="nav nav-tabs nav-line-tabs nav-stretch fs-6 border-0">
                         <li class="nav-item">
-                            <a class="nav-link {{request()->is('office/kegiatan/*/paket-project-brief') ? 'active' : ''}}" href="{{route('phln.project_brief',$kegiatan->id)}}">1. Project Brief</a>
+                            <a class="nav-link {{request()->is('phln/kegiatan/*/paket-project-brief') ? 'active' : ''}}" href="{{route('phln.project_brief',$kegiatan->id)}}">1. Project Brief</a>
                         </li>
                         {{-- @if($data->id) --}}
                         <li class="nav-item">
                             <a class="nav-link {{request()->is('office/kegiatan/*/paket') ? 'active' : ''}}" href="{{route('phln.kegiatan.paket',$kegiatan->id)}}">2. Pemaketan & Statusnya</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{request()->is('office/kegiatan/*/paket-timeline') ? 'active' : ''}}" href="{{route('phln.paket_timeline',$kegiatan->id)}}">3. Timeline</a>
+                            <a class="nav-link {{request()->is('phln/kegiatan/*/paket-timeline') ? 'active' : ''}}" href="{{route('phln.paket_timeline',$kegiatan->id)}}">3. Timeline</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{request()->is('office/kegiatan/*/paket-owp') ? 'active' : ''}}" href="{{route('phln.paket_owp',$kegiatan->id)}}">4. OWP</a>
+                            <a class="nav-link {{request()->is('phln/kegiatan/*/paket-owp') ? 'active' : ''}}" href="{{route('phln.paket_owp',$kegiatan->id)}}">4. OWP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{request()->is('office/kegiatan/*/paket-awp') ? 'active' : ''}}" href="{{route('phln.paket_awp',$kegiatan->id)}}">5. AWP</a>
+                            <a class="nav-link {{request()->is('phln/kegiatan/*/paket-awp') ? 'active' : ''}}" href="{{route('phln.paket_awp',$kegiatan->id)}}">5. AWP</a>
                         </li>
                         {{-- @endif --}}
                     </ul>
